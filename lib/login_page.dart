@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training/home.dart';
 import 'package:flutter_training/home_old.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -22,6 +21,9 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.network(
+                    "https://cdn.iconscout.com/icon/premium/png-256-thumb/account-login-2463560-2090543.png"),
+                Container(height: 20),
                 TextField(
                   onChanged: (text) {
                     email = text;
