@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_training/login_page.dart';
 
 import 'app_controller.dart';
-import 'home.dart';
 
 class AppWidget extends StatelessWidget {
   @override

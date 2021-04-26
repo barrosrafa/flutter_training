@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   obscureText: true,
                 ),
                 Container(height: 20),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     if (email == 't@t.com' && password == '123') {
                       print('correto');
