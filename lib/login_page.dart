@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training/home.dart';
+import 'package:flutter_training/home_old.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -45,7 +47,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 ElevatedButton(
                   onPressed: () {
                     if (email == 't@t.com' && password == '123') {
-                      print('correto');
+                      Navigator.of(context).pushNamed('/home');
+                    } else {
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
                     }
                   },
                   child: Text("Entrar"),
