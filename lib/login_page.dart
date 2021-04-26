@@ -62,9 +62,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ElevatedButton(
                 onPressed: () {
                   if (email == 't@t.com' && password == '123') {
-                    Navigator.of(context).pushNamed('/home');
+                    Navigator.of(context).pushReplacementNamed('/home');
                   } else {
-                    Navigator.of(context).pushReplacement(
+                    Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => HomePage()),
                     );
                   }
