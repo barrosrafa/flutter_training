@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_training/login_page.dart';
 
 import 'app_controller.dart';
 import 'home.dart';
@@ -15,7 +16,7 @@ class AppWidget extends StatelessWidget {
                   ? Brightness.dark
                   : Brightness.light),
           debugShowCheckedModeBanner: false,
-          home: HomeScreen(),
+          home: LoginScreen(),
         );
       },
       animation: AppController.instance,
