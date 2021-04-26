@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_training/app_controller.dart';
+import 'package:flutter_training/switch_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -9,28 +10,28 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeState extends State<HomeScreen> {
-  int counter = 0;
-  bool isDartTheme = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Home Page"),
+        actions: [CustomSwitch()],
       ),
-      body: Center(
-        child: Switch(
-          value: AppController.instance.isDartTheme,
-          onChanged: (value) {
-            AppController.instance.changeTheme();
-          },
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Contador: ${AppController.instance.counter}'),
+            CustomSwitch(),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.plus_one),
         onPressed: () {
-          setState(() {
-            counter++;
-          });
+          AppController.instance.changeCount();
         },
       ),
     );

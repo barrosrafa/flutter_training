@@ -10,4 +10,9 @@ class AppController extends ChangeNotifier {
     isDartTheme = !isDartTheme;
     notifyListeners();
   }
+
+  changeCount() {
+    counter++;
+    notifyListeners();
+  }
 }
